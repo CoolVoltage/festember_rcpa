@@ -43,6 +43,21 @@ function layoutSpecs(){
 
     var layoutHeight = $(document).innerHeight() - $(".header").outerHeight();
     $("#layout").outerHeight(layoutHeight);
-    $("#menu").outerHeight(layoutHeight);
     $(".content").outerHeight(layoutHeight - 50);
+    var pos = $(".content").offset();
+    if(pos.left - 150 >= 120){
+	   $("#pillarPng").css("display","block");
+	   $("#pillarPng").css("left",150+(pos.left-150-100)/2);
+
+	   $("#topPillar").css("display","block");
+	   $("#topPillar").css("left",150+(pos.left-150-100)/2-25);
+
+	   $("#bottomPillar").css("display","block");
+	   $("#bottomPillar").css("left",150+(pos.left-150-100)/2-25);
+   }else{
+	   $("#pillarPng").css("display","none");
+	   $("#topPillar").css("display","none");
+	   $("#bottomPillar").css("display","none");
+   }
+
 }

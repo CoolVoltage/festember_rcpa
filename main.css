@@ -1,7 +1,7 @@
 body {
     color: #000000;
     background-image : url("tiles.png");
-    background-size : 20px;
+    background-size : 30px;
     background-repeat : repeat;
     overflow : hidden;
 }
@@ -23,7 +23,28 @@ Add transition to containers so they can push in and out.
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-
+#pillarPng{
+	display:none;
+	position:absolute;
+	width:100px;
+	height:100%;
+	top:0;
+	background-repeat:repeat-y;
+	background-image : url("pillar.png");
+}
+#topPillar,#bottomPillar{
+	display:none;
+	position:absolute;
+	width:161px;
+	z-index:1000;
+	left:0;
+}
+#topPillar{
+	top:0;
+}
+#bottomPillar{
+	bottom:0;
+}
 /*
 This is the parent `<div>` that contains the menu and the content area.
 */
@@ -48,16 +69,17 @@ The content `<div>` is where all your content goes.
     padding: 0em 2em;
     max-width: 800px;
     margin-bottom: 50px;
+    margin-top : -2em;
     line-height: 1.6em;
     color:black;
-    background-repeat:no-repeat;
+  background-repeat:no-repeat;
     background-image : url("noticeboard.png");
     background-size:100% 100%;
     border: 10px solid transparent;
     -webkit-border-image: url(borderNotice.png) 19% round; /* Safari 3.1-5 */
     -o-border-image: url(borderNotice.png) 19% round; /* Opera 11-12.1 */
     border-image: url(borderNotice.png) 19% round;
-
+    
 }
 
 .header {
