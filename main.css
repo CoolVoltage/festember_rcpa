@@ -3,6 +3,7 @@ body {
     background-image : url("tiles.png");
     background-size : 20px;
     background-repeat : repeat;
+    overflow : hidden;
 }
 
 .pure-img-responsive {
@@ -29,6 +30,7 @@ This is the parent `<div>` that contains the menu and the content area.
 #layout {
     position: relative;
     padding-left: 0;
+    padding-top : 2em;
 }
     #layout.active #menu {
         left: 150px;
@@ -92,8 +94,8 @@ appears on the left side of the page.
 #menu {
     margin-left: -150px; /* "#menu" width */
     width: 150px;
+    margin-top : -2em;
     position: fixed;
-    margin-top:-20px;
     left: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
     background: #191818;

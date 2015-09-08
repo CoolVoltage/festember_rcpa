@@ -30,6 +30,19 @@
         toggleClass(layout, active);
         toggleClass(menu, active);
         toggleClass(menuLink, active);
+
     };
+	layoutSpecs();
 
 }(this, this.document));
+
+window.onresize = function(){
+	layoutSpecs();
+}
+function layoutSpecs(){
+
+    var layoutHeight = $(document).innerHeight() - $(".header").outerHeight();
+    $("#layout").outerHeight(layoutHeight);
+    $("#menu").outerHeight(layoutHeight);
+    $(".content").outerHeight(layoutHeight - 50);
+}
