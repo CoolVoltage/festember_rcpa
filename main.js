@@ -33,7 +33,27 @@
 
     };
 	layoutSpecs();
-
+	
+	var arr1 = $("a.pure-menu-link");
+	var arr2 = $("div.tabElement > a");
+	$(arr1[0]).addClass("menuLinkActive");
+	if(arr2.length >0){
+		$("div.tabElement").css("display","none");
+		for(var i=0;i<arr1.length;i++){
+			arr1[i].onclick = function(e){
+				e.preventDefault();
+				var j=0;
+				for(j=0;j<arr1.length;j++){
+					console.log(this,arr1[j]);
+					if(this == arr1[j])
+						break;
+				}
+				$(arr1).removeClass("menuLinkActive");
+				$(arr1[j]).addClass("menuLinkActive");
+				$(arr2[j]).trigger("click");
+			}
+		}
+	}
 }(this, this.document));
 
 window.onresize = function(){

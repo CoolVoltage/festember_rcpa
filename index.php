@@ -16,8 +16,8 @@
 
 <?php
     // CONTENT preprocessing 
-    // echo htmlentities($CONTENT);
-    // exit();
+    //echo htmlentities($CONTENT);
+    //exit();
 
 ?>
 
