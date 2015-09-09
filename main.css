@@ -83,6 +83,7 @@ The content `<div>` is where all your content goes.
     margin-top : -2em;
     line-height: 1.6em;
     color:black;
+    font-size:0.75em;
     background-repeat:no-repeat;
     background:white;
     background-image : url("content.jpg");
@@ -103,7 +104,7 @@ The content `<div>` is where all your content goes.
  }
     .header h1 {
         margin: 0.1em 0;
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 300;
     }
      .header h2 {
