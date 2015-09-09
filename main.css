@@ -6,7 +6,7 @@ body {
     color: #000000;
     font-family:myFirstFont;
     background-image : url("tiles.png");
-    background-size : 2em;
+    background-size : 4em;
     background-repeat : repeat;
     overflow : hidden;
 }
@@ -71,7 +71,7 @@ Add transition to containers so they can push in and out.
 	margin : 5px;
 }
 .bottomLink a{
-	color:black;
+	color:white;
 	font-size:1em;
 }
 /*
