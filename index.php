@@ -1,10 +1,8 @@
 <?php
-// echo htmlentities($MENUBAR);
-// ecit();
+    // MENUBAR preprocessing 
     $MENUBAR = str_replace("<div class='cms-menuitem'>", "", $MENUBAR);
     $MENUBAR = str_replace("</div>", " ", $MENUBAR);
     $MENUBAR = str_replace("</ul>", "", $MENUBAR);
-
     $li_list = array_slice(explode('<li', $MENUBAR),  1,100);
     $new_menubar = "";
     foreach ($li_list as $key => $value) {
@@ -13,7 +11,14 @@
         $new = '<li class="pure-menu-item">' . $new;
         $new_menubar .= $new;
     }
-    $MENUBAR = $new_menubar;   
+    $MENUBAR = $new_menubar;  
+?>
+
+<?php
+    // CONTENT preprocessing 
+    // echo htmlentities($CONTENT);
+    // exit();
+
 ?>
 
 <?php
@@ -37,7 +42,6 @@ if(!defined('__PRAGYAN_CMS'))
     if($PAGELASTUPDATED!="")
         echo '<meta http-equiv="Last-Update" content="'.substr($PAGELASTUPDATED,0,10).'" />'."\n";
 ?>
-<script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/script.js"></script>
 
 <link rel="stylesheet" href="<?php echo $TEMPLATEBROWSERPATH; ?>/pure-min.css">
     <!--[if lte IE 8]>
@@ -50,7 +54,13 @@ if(!defined('__PRAGYAN_CMS'))
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
 </script>
-
+<script language="javascript" type="text/javascript" src="<?php echo  $TEMPLATEBROWSERPATH; ?>/jquery-latest.js" ></script>
+<script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/script.js"></script>
+<script language="javascript" type="text/javascript">
+    //defined here for use in javascript
+    var templateBrowserPath = "<?php echo $TEMPLATEBROWSERPATH ?>";
+    var urlRequestRoot = "<?php echo $urlRequestRoot?>";
+</script>
 </head>
 <body onload="<?php echo $STARTSCRIPTS; ?>">
 
@@ -83,6 +93,9 @@ if(!defined('__PRAGYAN_CMS'))
         <div class="content cms-content">
 
             <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
+            <?php echo $INFOSTRING; ?>
+            <?php echo $WARNINGSTRING;?>
+            <?php echo $ERRORSTRING; ?>
             <?php echo $CONTENT; ?>
 
             <!--<div class="pure-g">
