@@ -92,34 +92,28 @@ if(!defined('__PRAGYAN_CMS'))
 
         <div class="content cms-content">
 
-            <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
+            <h2 class="content-subhead"></h2>
             <?php echo $INFOSTRING; ?>
             <?php echo $WARNINGSTRING;?>
             <?php echo $ERRORSTRING; ?>
             <?php echo $CONTENT; ?>
-
-            <!--<div class="pure-g">
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="./index_files/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="./index_files/9069585985_80da8db54f.jpg" alt="Train">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="./index_files/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="./index_files/9086701425_fda3024927.jpg" alt="Mountain">
-                </div>
-            </div>-->
 
         </div>
     </div>
 </div>
     <table id="bottomLinks" cellspacing="10">
     	<tr>
-    		<td class="bottomLink"><a href="">Login</a></td>
-    		<td class="bottomLink"><a href="">Register</a></td>
+            <?php
+                global $userId;
+                if($userId!=0){
+                    echo '<td class="bottomLink"><a href="./+profile">Festember ID:'.$userId.'</a></td>';
+                    echo '<td class="bottomLink"><a href="./+logout">Logout</a></td>';
+                }
+                else{
+                    echo '<td class="bottomLink"><a href="./+login">Login</a></td>';
+                    echo '<td class="bottomLink"><a href="./+login&subaction=register">Register</a></td>';
+                }
+            ?>
     	</tr>
     </table>
 
