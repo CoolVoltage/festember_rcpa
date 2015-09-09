@@ -37,6 +37,8 @@ if(!defined('__PRAGYAN_CMS'))
     if($PAGELASTUPDATED!="")
         echo '<meta http-equiv="Last-Update" content="'.substr($PAGELASTUPDATED,0,10).'" />'."\n";
 ?>
+<script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/script.js"></script>
+
 <link rel="stylesheet" href="<?php echo $TEMPLATEBROWSERPATH; ?>/pure-min.css">
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/side-menu-old-ie.css">
@@ -71,25 +73,18 @@ if(!defined('__PRAGYAN_CMS'))
 
             <ul class="pure-menu-list animated slideInLeft">
                 <?php echo $MENUBAR; ?>
-                <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">Introduction</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Rules</a></li>
-
-                <li class="pure-menu-item">
-                    <a href="#" class="pure-menu-link">Register</a>
-                </li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Prizes</a></li>
-
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Timings</a></li> -->
+                
             </ul>
         </div>
     </div>
 
     <div id="main">
 
-        <div class="content">
+        <div class="content cms-content">
 
             <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
+            <?php echo $CONTENT; ?>
+
             <!--<div class="pure-g">
                 <div class="pure-u-1-4">
                     <img class="pure-img-responsive" src="./index_files/9069037713_1752f5daeb.jpg" alt="Peyto Lake">

@@ -381,3 +381,54 @@ transform: translate3d(0, 0, 0);
 .slideInLeft {
 	animation-name: slideInLeft;
 }
+
+/* Book module */
+
+.tabEnvelope {
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    text-decoration : none;
+}
+.tabContent {
+    display: none;
+    padding: 13px;
+}
+.tabElement {
+    border: 1px solid black;
+    padding: 3px;
+    margin: 2px;
+    color: black;
+    float : left;
+    
+}
+.cms-registrationform > form > fieldset > table {
+text-align :center;
+float:center;
+position:relative;
+left:200px;
+}
+.cms-registrationform > form > fieldset > table > tbody >tr:first-child >td{
+background-color:#DEDFDA;
+}
+.cms-profile > fieldset > table {
+text-align :center;
+float:center;
+position:relative;
+margin-left: auto;
+margin-right:auto;
+}
+.cms-profile > fieldset > table > tbody >tr:first-child >td{
+background-color:#DEDFDA;
+}
+.searchBox > tbody > tr > td > table > tbody >  tr > td {
+background-color:#DEDFDA;
+}
+.tabElement a {
+    text-decoration : none;
+}
+
+.active {
+    display: block;
+}
+
