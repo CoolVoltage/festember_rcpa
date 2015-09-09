@@ -42,7 +42,7 @@ window.onresize = function(){
 function layoutSpecs(){
 
     var layoutHeight = $(window).innerHeight() - $(".header").outerHeight();
-    layoutHeight = layoutHeight > 400?400:layoutHeight;
+    layoutHeight = layoutHeight > 500?500:layoutHeight;
     $("#layout").outerHeight(layoutHeight);
     $(".content").outerHeight(layoutHeight - 50);
     var pos = $(".content").offset();

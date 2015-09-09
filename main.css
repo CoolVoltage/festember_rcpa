@@ -66,6 +66,7 @@ Add transition to containers so they can push in and out.
 	bottom:0;
 	border-collapse : separate;
 	border-spacing:10px 0px;
+	font-size:1.5em;
 	right:0;
 	margin : 5px;
 }
