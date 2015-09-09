@@ -1,7 +1,7 @@
 body {
     color: #000000;
     background-image : url("tiles.png");
-    background-size : 30px;
+    background-size : 2em;
     background-repeat : repeat;
     overflow : hidden;
 }
@@ -120,7 +120,6 @@ appears on the left side of the page.
     position: fixed;
     left: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -128,8 +127,10 @@ appears on the left side of the page.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #999;
+        color: white;
         border: none;
+	font-weight : bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         padding: 0.6em 0 0.6em 0.6em;
     }
 
@@ -141,13 +142,19 @@ appears on the left side of the page.
         border: none;
         background: transparent;
     }
-
+    #menu .pure-menu-item {
+	//background: #191818;
+	background-image: url("cards.png");
+	background-size : 40px;
+	margin-bottom : 1em;
+	border : 1px solid #333;
+	    }
     /*
     Add that light border to separate items into groups.
     */
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
+        //border-top: 1px solid #333;
     }
         /*
         Change color of the anchor links on hover/focus.
