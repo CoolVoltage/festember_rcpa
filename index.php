@@ -1,32 +1,61 @@
+<?php
+// echo htmlentities($MENUBAR);
+// ecit();
+    $MENUBAR = str_replace("<div class='cms-menuitem'>", "", $MENUBAR);
+    $MENUBAR = str_replace("</div>", " ", $MENUBAR);
+    $MENUBAR = str_replace("</ul>", "", $MENUBAR);
+
+    $li_list = array_slice(explode('<li', $MENUBAR),  1,100);
+    $new_menubar = "";
+    foreach ($li_list as $key => $value) {
+        $new = explode("<a", $value)[1];
+        $new = ' <a class="pure-menu-link" ' . $new;
+        $new = '<li class="pure-menu-item">' . $new;
+        $new_menubar .= $new;
+    }
+    $MENUBAR = $new_menubar;   
+?>
+
+<?php
+if(!defined('__PRAGYAN_CMS'))
+{ 
+    header($_SERVER['SERVER_PROTOCOL'].' 403 Forbidden');
+    echo "<h1>403 Forbidden<h1><h4>You are not authorized to access the page.</h4>";
+    echo '<hr/>'.$_SERVER['SERVER_SIGNATURE'];
+    exit(1);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Responsive Side Menu – Layout Examples – Pure</title>
-
-<link rel="stylesheet" href="./pure-min.css">
-  
+<title><?php $cmstitle=$TITLE;echo $cmstitle; ?></title>
+<meta name="description" content="<?php echo $SITEDESCRIPTION ?>" />
+<meta name="keywords" content="<?php echo $SITEKEYWORDS.', '.$PAGEKEYWORDS ?>" /> 
+<?php global $urlRequestRoot;   global $PAGELASTUPDATED;
+    if($PAGELASTUPDATED!="")
+        echo '<meta http-equiv="Last-Update" content="'.substr($PAGELASTUPDATED,0,10).'" />'."\n";
+?>
+<link rel="stylesheet" href="<?php echo $TEMPLATEBROWSERPATH; ?>/pure-min.css">
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/side-menu-old-ie.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="<?php echo $TEMPLATEBROWSERPATH; ?>/main.css">
     <!--<![endif]-->
-  
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
-
 </script>
 
 </head>
-<body>
+<body onload="<?php echo $STARTSCRIPTS; ?>">
 
 <div class="header">
 </div>
-<img id="topPillar" src="topPillar.png">
-<img id="bottomPillar" src="bottomPillar.png">
+<img id="topPillar" src="<?php echo $TEMPLATEBROWSERPATH; ?>/topPillar.png">
+<img id="bottomPillar" src="<?php echo $TEMPLATEBROWSERPATH; ?>/bottomPillar.png">
 <div id="pillarPng"></div>
 <div id="menuShadow"></div>
 <div id="layout">
@@ -41,7 +70,8 @@
 <!--            <a class="pure-menu-heading" href="http://purecss.io/layouts/side-menu/#">Pormaboku</a> -->
 
             <ul class="pure-menu-list animated slideInLeft">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Introduction</a></li>
+                <?php echo $MENUBAR; ?>
+                <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">Introduction</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Rules</a></li>
 
                 <li class="pure-menu-item">
@@ -50,7 +80,7 @@
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Prizes</a></li>
 
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Timings</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Timings</a></li> -->
             </ul>
         </div>
     </div>
@@ -88,8 +118,8 @@
 
 
 
-<script src="./jquery-2.1.4.min.js"></script>
-<script src="./main.js"></script>
+<script src="<?php echo $TEMPLATEBROWSERPATH; ?>/jquery-2.1.4.min.js"></script>
+<script src="<?php echo $TEMPLATEBROWSERPATH; ?>/main.js"></script>
 
 
 
