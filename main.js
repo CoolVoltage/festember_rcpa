@@ -41,7 +41,7 @@ window.onresize = function(){
 }
 function layoutSpecs(){
 
-    var layoutHeight = $(document).innerHeight() - $(".header").outerHeight();
+    var layoutHeight = $(window).innerHeight() - $(".header").outerHeight();
     $("#layout").outerHeight(layoutHeight);
     $(".content").outerHeight(layoutHeight - 50);
     var pos = $(".content").offset();
@@ -50,14 +50,18 @@ function layoutSpecs(){
 	   $("#pillarPng").css("left",150+(pos.left-150-100)/2);
 
 	   $("#topPillar").css("display","block");
-	   $("#topPillar").css("left",150+(pos.left-150-100)/2-25);
+	   $("#topPillar").css("left",150+(pos.left-150-100)/2-17);
 
 	   $("#bottomPillar").css("display","block");
-	   $("#bottomPillar").css("left",150+(pos.left-150-100)/2-25);
+	   $("#bottomPillar").css("left",150+(pos.left-150-100)/2-19);
+
+	   $("#menuShadow").css("display","block");
+	   $("#menuShadow").css("width",150+(pos.left-150-100)/2+25);
    }else{
 	   $("#pillarPng").css("display","none");
 	   $("#topPillar").css("display","none");
 	   $("#bottomPillar").css("display","none");
+	   $("#menuShadow").css("display","none");
    }
-
+   
 }

@@ -32,6 +32,17 @@ Add transition to containers so they can push in and out.
 	background-repeat:repeat-y;
 	background-image : url("pillar.png");
 }
+#menuShadow{
+	display:none;
+	position:absolute;
+	height:100%;
+	left:0;
+	top:0;
+	background:white;
+    background-repeat:no-repeat;
+    background-image : url("noticeboard.png");
+    background-size:100% 100%;
+}
 #topPillar,#bottomPillar{
 	display:none;
 	position:absolute;
@@ -72,20 +83,22 @@ The content `<div>` is where all your content goes.
     margin-top : -2em;
     line-height: 1.6em;
     color:black;
-  background-repeat:no-repeat;
-    background-image : url("noticeboard.png");
+    background-repeat:no-repeat;
+    background:white;
+    background-image : url("content.jpg");
     background-size:100% 100%;
     border: 10px solid transparent;
     -webkit-border-image: url(borderNotice.png) 19% round; /* Safari 3.1-5 */
     -o-border-image: url(borderNotice.png) 19% round; /* Opera 11-12.1 */
     border-image: url(borderNotice.png) 19% round;
-    
+    overflow : auto; 
 }
 
 .header {
      margin: 0;
      color: #333;
      text-align: center;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
      padding: 2.5em 2em 2.5em 2em;
  }
     .header h1 {
@@ -286,4 +299,19 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         left: 150px;
     }
 }
+.content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
 
+.content::-webkit-scrollbar
+{
+width: 6px;
+       background-color: #F5F5F5;
+}
+
+.content::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
