@@ -72,6 +72,7 @@ if(!defined('__PRAGYAN_CMS'))
 <body onload="<?php echo $STARTSCRIPTS; ?>">
 
 <div class="header">
+	<h1>Inner</h1>
 </div>
 <img id="topPillar" src="<?php echo $TEMPLATEBROWSERPATH; ?>/topPillar.png">
 <img id="bottomPillar" src="<?php echo $TEMPLATEBROWSERPATH; ?>/bottomPillar.png">
@@ -99,17 +100,11 @@ if(!defined('__PRAGYAN_CMS'))
 
         <div class="content cms-content">
 
-            <h2 class="content-subhead"></h2>
             <?php echo $INFOSTRING; ?>
             <?php echo $WARNINGSTRING;?>
             <?php echo $ERRORSTRING; ?>
             <?php echo $CONTENT; ?>
 		
-	    <div class="pure-g clusters">
-	    	<img class="pure-u-1 pure-u-md-1-3" src="http://i.imgur.com/RihhhWt.jpg">
-	    	<img class="pure-u-1 pure-u-md-1-3" src="http://i.imgur.com/RihhhWt.jpg">
-	    	<img class="pure-u-1 pure-u-md-1-3" src="http://i.imgur.com/RihhhWt.jpg">
-	    </div>
         </div>
     </div>
 </div>

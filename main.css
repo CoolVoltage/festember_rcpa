@@ -102,14 +102,14 @@ The content `<div>` is where all your content goes.
     line-height: 1.6em;
     color:black;
     font-size:0.75em;
-    background-repeat:no-repeat;
-    background:white;
+    background-repeat:repeat;
     background-image : url("content.jpg");
-    background-size:100% 100%;
+    background-size:128px;
     border: 10px solid transparent;
     -webkit-border-image: url(borderNotice.png) 19% round; /* Safari 3.1-5 */
     -o-border-image: url(borderNotice.png) 19% round; /* Opera 11-12.1 */
     border-image: url(borderNotice.png) 19% round;
+    box-shadow : 10px 10px 25px #0B0B0B;
     overflow : auto; 
 }
 
@@ -121,9 +121,10 @@ The content `<div>` is where all your content goes.
      padding: 2.5em 2em 2.5em 2em;
  }
     .header h1 {
-        margin: 0.1em 0;
-        font-size: 2em;
+        margin: 0 auto;
+        font-size: 3em;
         font-weight: 300;
+	color:white;
     }
      .header h2 {
         font-weight: 300;
