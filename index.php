@@ -53,6 +53,13 @@ if(!defined('__PRAGYAN_CMS'))
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="<?php echo $TEMPLATEBROWSERPATH; ?>/grids-responsive-min.css">
+	<!--<![endif]-->
+
 </script>
 <script language="javascript" type="text/javascript" src="<?php echo  $TEMPLATEBROWSERPATH; ?>/jquery-latest.js" ></script>
 <script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/script.js"></script>
@@ -97,7 +104,12 @@ if(!defined('__PRAGYAN_CMS'))
             <?php echo $WARNINGSTRING;?>
             <?php echo $ERRORSTRING; ?>
             <?php echo $CONTENT; ?>
-
+		
+	    <div class="pure-g clusters">
+	    	<img class="pure-u-1 pure-u-md-1-3" src="http://i.imgur.com/RihhhWt.jpg">
+	    	<img class="pure-u-1 pure-u-md-1-3" src="http://i.imgur.com/RihhhWt.jpg">
+	    	<img class="pure-u-1 pure-u-md-1-3" src="http://i.imgur.com/RihhhWt.jpg">
+	    </div>
         </div>
     </div>
 </div>
