@@ -100,17 +100,13 @@ The content `<div>` is where all your content goes.
     margin-bottom: 50px;
     margin-top : -2em;
     line-height: 1.6em;
-    color:black;
+    background : rgba(0,0,0,0.6);
+    border-radius:10px;
     font-size:0.75em;
-    background-repeat:repeat;
-    background-image : url("content.jpg");
-    background-size:128px;
-    border: 10px solid transparent;
-    -webkit-border-image: url(borderNotice.png) 19% round; /* Safari 3.1-5 */
-    -o-border-image: url(borderNotice.png) 19% round; /* Opera 11-12.1 */
-    border-image: url(borderNotice.png) 19% round;
-    box-shadow : 10px 10px 25px #0B0B0B;
-    overflow : auto; 
+    font-size:1em;
+    font-weight:300;
+    color:white;
+   overflow : auto; 
 }
 
 .header {
