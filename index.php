@@ -72,7 +72,7 @@ if(!defined('__PRAGYAN_CMS'))
 <body onload="<?php echo $STARTSCRIPTS; ?>">
 
 <div class="header">
-	<h1>Inner</h1>
+ <h1><?php echo $cmstitle;?></h1>  
 </div>
 <img id="topPillar" src="<?php echo $TEMPLATEBROWSERPATH; ?>/topPillar.png">
 <img id="bottomPillar" src="<?php echo $TEMPLATEBROWSERPATH; ?>/bottomPillar.png">
@@ -104,9 +104,6 @@ if(!defined('__PRAGYAN_CMS'))
             <?php echo $WARNINGSTRING;?>
             <?php echo $ERRORSTRING; ?>
             <?php echo $CONTENT; ?>
-		<p>Lorem ipsum dolor sit amet, facilisis in per purus augue, turpis dolor habitasse dui orci feugiat porta, dis sed adipiscing est id nulla. Felis in mi lectus nibh sed mi, leo commodo, curabitur in justo aliquam lacinia a dictum, nunc wisi mollis. Lacus donec fusce non, scelerisque curabitur vel volutpat libero, arcu blandit, suspendisse hymenaeos porro dolor leo, nonummy eu ut. Velit platea eget mauris massa. Hymenaeos nam volutpat orci id, vel sollicitudin, id ut sodales. Suscipit in tempor neque porta, adipiscing morbi, sed praesent nulla molestie dictumst leo sodales.</p>
-		<p>Risus id venenatis fringilla, scelerisque hendrerit, eu venenatis arcu lacus suscipit eros. Tincidunt a morbi, ultrices per quis, iaculis orci. In pellentesque scelerisque integer vivamus, lacus parturient, nisl phasellus cras. Aut eget id cras non suspendisse, est vitae fames hendrerit ipsum laboriosam quam, vivamus faucibus, ut ultricies ut libero, vitae erat sit convallis vitae nulla. Mauris velit nulla, bibendum hymenaeos, diam tempus integer aliquam turpis. Metus egestas netus et sed et cubilia, lacus nec, velit maecenas tellus pellentesque ipsum, pulvinar vivamus litora. Et maecenas mi nullam, cras ac. Dignissim ultricies id dolor, amet eros sed nibh sodales tristique, vivamus eos, ut ridiculus torquent sapien natoque dolor vel, faucibus et a penatibus libero. Felis arcu sed, amet volutpat pede nunc. Malesuada morbi, mi bibendum vestibulum integer ullam quis, consectetuer praesent consectetuer erat.</p>
-		<p>Iaculis nam, massa ipsum in neque, viverra ornare in sollicitudin augue tristique id, at in metus odio tortor et curabitur. Purus nulla et viverra aliquet, vitae amet nibh quam sollicitudin eu, et a maecenas diam enim sem consectetuer, imperdiet in nec. Condimentum dignissim nibh nam orci, amet at in, eu odio porta convallis velit, facilisis rutrum sed ullamcorper. Elit vulputate, diam enim a enim, sem mauris integer enim, lorem mus velit turpis nascetur scelerisque magna, in ante dapibus. Tempor habitant sed senectus, pede lorem, elit in et	</p>
         </div>
     </div>
 </div>
@@ -120,7 +117,7 @@ if(!defined('__PRAGYAN_CMS'))
                 }
                 else{
                     echo '<td class="bottomLink"><a href="./+login">Login</a></td>';
-                    echo '<td class="bottomLink"><a href="./+login&subaction=register">Register</a></td>';
+                    echo '<td class="bottomLink"><a href="./+login&subaction=register" disabled>Register</a></td>';
                 }
             ?>
     	</tr>

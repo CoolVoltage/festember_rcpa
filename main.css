@@ -69,10 +69,39 @@ Add transition to containers so they can push in and out.
 	font-size:1.5em;
 	right:0;
 	margin : 5px;
+	display: none;
 }
 .bottomLink a{
 	color:white;
 	font-size:1em;
+}
+.registrationform legend,.cms-registrationform legend{
+	color:white;
+}
+.registrationform table,.cms-registrationform table{
+	border-collapse:separate;
+	border-spacing:5px;
+}
+.registrationform a,.cms-registrationform a{
+	color:white;
+}
+.registrationform input,.cms-registrationform input{
+	color:black;
+}
+.registrationform select,.cms-registrationform select{
+	color:black;
+}
+.registrationform,.cms-registrationform{
+	color:white;
+}
+.cms-info {
+	margin:5px;
+	display:inline-block;
+	border: 1px solid white;
+	padding: 2px;
+}
+.cms-info a{
+	color:white;
 }
 /*
 This is the parent `<div>` that contains the menu and the content area.
