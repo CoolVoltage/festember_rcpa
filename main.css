@@ -71,6 +71,15 @@ Add transition to containers so they can push in and out.
 	margin : 5px;
 	display: none;
 }
+#back{
+	width:60px;
+	cursor:pointer;
+	display:inline-block;
+	margin-left:30px;
+}
+#back:hover{
+	width:65px;
+}
 .bottomLink a{
 	color:white;
 	font-size:1em;
@@ -209,6 +218,9 @@ appears on the left side of the page.
 .pure-menu-item{
 	box-shadow : 5px 5px 9px #0B0B0B;
 width:150px;
+}
+.pure-menu-item:hover{
+	width:155px;	
 }
     /*
     Add that light border to separate items into groups.
